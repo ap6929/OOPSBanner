@@ -1,6 +1,5 @@
 public class OOPSBannerApp {
- feature/UC6-Refactor
-	    public static String[] get0Pattern() {
+	    public static String[] getOPattern() {
 			return new String[]{
 				"   ***  ",
 				"**    **",
@@ -34,7 +33,7 @@ public class OOPSBannerApp {
 			};
 		}
 public static void main(String[] args){
-      String[] oPattern = get0Pattern();
+      String[] oPattern = getOPattern();
 	  String[] pPattern = getPPattern();
 	  String[] sPattern = getSPattern();
 	  
