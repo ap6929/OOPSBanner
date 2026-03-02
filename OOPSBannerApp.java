@@ -2,6 +2,7 @@ class CharacterPatternMap {
     Character character;
     String[] pattern;
 
+    // Constructor
     public CharacterPatternMap(Character character, String[] pattern) {
         this.character = character;
         this.pattern = pattern;
@@ -18,6 +19,7 @@ class CharacterPatternMap {
 
 public class BannerPrinter {
 
+    // Create pattern mappings
     public static CharacterPatternMap[] createCharacterPatternMaps() {
 
         String[] O = {
@@ -61,14 +63,18 @@ public class BannerPrinter {
 
         return characterPatternMap;
     }
+
+    // Get pattern for a character
     public static String[] getCharacterPattern(char ch, CharacterPatternMap[] charMaps) {
         for (CharacterPatternMap map : charMaps) {
             if (map.getCharacter() == ch) {
                 return map.getPattern();
             }
         }
-        return null;
+        return null; // If character not found
     }
+
+    // Print banner message
     public static void printMessage(String message, CharacterPatternMap[] charMaps) {
 
         message = message.toUpperCase();
@@ -83,6 +89,8 @@ public class BannerPrinter {
             System.out.println();
         }
     }
+
+    // Main method
     public static void main(String[] args) {
 
         CharacterPatternMap[] charMaps = createCharacterPatternMaps();
